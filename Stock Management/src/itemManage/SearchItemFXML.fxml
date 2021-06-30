@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itemManage.SearchItemFXMLController">
+    <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #B2A9A7;">
+            <children>
+                <ImageView fitHeight="108.0" fitWidth="1280.0" layoutX="254.0" layoutY="66.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <image>
+                        <Image url="@../images/top-bar.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: RGB(235,235,235);">
+            <children>
+                <AnchorPane layoutX="316.0" layoutY="16.0" prefHeight="662.0" prefWidth="962.0" style="-fx-background-color: #F7EAE7;" styleClass="button" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="592.0" prefWidth="952.4000000000001" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="506.0" prefWidth="958.0">
+                                    <children>
+                                        <Text layoutX="296.0" layoutY="142.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code :" textAlignment="CENTER" />
+                                        <Text fx:id="itemID" layoutX="400.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="150.0" textAlignment="CENTER" wrappingWidth="150.40000915527344" />
+                                        <Text layoutX="296.0" layoutY="292.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Brand :" textAlignment="CENTER" />
+                                        <Text layoutX="296.0" layoutY="342.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Price :" textAlignment="CENTER" />
+                                        <Text layoutX="296.0" layoutY="242.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Name :" textAlignment="CENTER" />
+                                        <Text layoutX="296.0" layoutY="192.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier ID :" textAlignment="CENTER" />
+                                        <Text layoutX="403.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item " textAlignment="CENTER">
+                                            <font>
+                                                <Font size="24.0" />
+                                            </font>
+                                        </Text>
+                              <Text fx:id="itemName" layoutX="400.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="150.0" textAlignment="CENTER" wrappingWidth="150.40000915527344" />
+                              <Text fx:id="supplierID" layoutX="400.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="150.0" textAlignment="CENTER" wrappingWidth="150.40000915527344" />
+                              <Button id="button" fx:id="cancel" contentDisplay="CENTER" layoutX="402.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="88.0" stylesheets="@../css/button.css" text="Back" />
+                              <Text fx:id="itemBrand" layoutX="400.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="150.0" textAlignment="CENTER" wrappingWidth="150.40000915527344" />
+                              <Text fx:id="itemPrice" layoutX="400.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="150.0" textAlignment="CENTER" wrappingWidth="150.40000915527344" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="300.0" style="-fx-background-color: #bababa;">
+                    <children>
+                        <Button id="button" fx:id="Home" alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" stylesheets="@../css/button.css" text="Home">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="button" fx:id="Exit" alignment="CENTER" layoutY="228.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" stylesheets="@../css/button.css" text="Exit" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="button" fx:id="stockManagement" alignment="CENTER" layoutY="57.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" stylesheets="@../css/button.css" text="Stock Management">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="button" fx:id="itemManagement" alignment="CENTER" layoutY="114.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" stylesheets="@../css/button.css" text="Item Management">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                  <Button id="button" fx:id="supplierManagement" alignment="CENTER" contentDisplay="CENTER" layoutY="171.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" stylesheets="@../css/button.css" text="Supplier Management">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+                <ImageView fitHeight="292.0" fitWidth="300.0" layoutX="3.0" layoutY="320.0">
+                    <image>
+                        <Image url="@../images/purchase-guy.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

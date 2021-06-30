@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #B2A9A7;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="1280.0" layoutX="254.0" layoutY="66.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../images/top-bar.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: RGB(235,235,235);">
+         <children>
+            <AnchorPane id="top_anchor" layoutX="311.0" layoutY="78.0" prefHeight="589.0" prefWidth="952.0" style="-fx-background-color: #F7EAE7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="78.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="28.0" prefHeight="18.0" prefWidth="82.0" text="Contract ID :" />
+                  <TextField layoutX="117.0" layoutY="24.0" prefHeight="26.0" prefWidth="95.0" />
+                  <TableView layoutX="14.0" layoutY="76.0" prefHeight="215.0" prefWidth="923.0">
+                    <columns>
+                      <TableColumn prefWidth="34.39996337890625" text="#" />
+                      <TableColumn prefWidth="88.79998779296875" text="Customer ID" />
+                        <TableColumn prefWidth="102.4000244140625" text="Customer Name" />
+                        <TableColumn prefWidth="98.39996337890625" text="Address" />
+                        <TableColumn prefWidth="94.4000244140625" text="Phone Numer" />
+                        <TableColumn prefWidth="100.0" text="Email Address" />
+                        <TableColumn prefWidth="89.60003662109375" text="NIC" />
+                    </columns>
+                  </TableView>
+                  <Button id="button" layoutX="883.0" layoutY="24.0" mnemonicParsing="false" text="Filter" />
+                  <Label layoutX="225.0" layoutY="28.0" text="From :" />
+                  <Label layoutX="447.0" layoutY="28.0" text="To :" />
+                  <DatePicker layoutX="269.0" layoutY="24.0" prefHeight="26.0" prefWidth="162.0" />
+                  <DatePicker layoutX="474.0" layoutY="24.0" prefHeight="26.0" prefWidth="162.0" />
+                  <CheckBox layoutX="680.0" layoutY="28.0" mnemonicParsing="false" text="Completed" />
+                  <CheckBox layoutX="790.0" layoutY="28.0" mnemonicParsing="false" text="Ongoing" />
+                  <ComboBox layoutX="119.0" layoutY="329.0" prefWidth="150.0" />
+                  <Label layoutX="14.0" layoutY="333.0" prefHeight="18.0" prefWidth="95.0" text="Building Type: " />
+                  <Label layoutX="14.0" layoutY="391.0" prefHeight="18.0" prefWidth="82.0" text="Extra Features :" />
+                  <CheckBox layoutX="119.0" layoutY="391.0" mnemonicParsing="false" text="Fire Resistive" />
+                  <CheckBox layoutX="119.0" layoutY="419.0" mnemonicParsing="false" text="Sound Proof" />
+                  <CheckBox layoutX="119.0" layoutY="450.0" mnemonicParsing="false" text="Air Conditoned" />
+                  <Button id="button" layoutX="259.0" layoutY="498.0" mnemonicParsing="false" onAction="#calculateEstCost" text="Calculate Cost" />
+                  <Label layoutX="325.0" layoutY="333.0" prefHeight="18.0" prefWidth="119.0" text="No of floors :" />
+                  <TextField layoutX="480.0" layoutY="329.0" prefHeight="26.0" prefWidth="103.0" />
+                  <Label layoutX="669.0" layoutY="333.0" prefHeight="18.0" prefWidth="150.0" text="Square feet per floor:" />
+                  <TextField layoutX="833.0" layoutY="329.0" prefHeight="26.0" prefWidth="103.0" />
+                  <Label layoutX="325.0" layoutY="391.0" prefHeight="18.0" prefWidth="137.0" text="Rooms per floor:" />
+                  <TextField layoutX="481.0" layoutY="386.0" prefHeight="26.0" prefWidth="103.0" />
+                  <Label layoutX="14.0" layoutY="502.0" prefHeight="18.0" prefWidth="119.0" text="Total Cost :" />
+                  <TextField layoutX="119.0" layoutY="498.0" prefHeight="26.0" prefWidth="119.0" />
+                  <Button id="button" layoutX="16.0" layoutY="549.0" mnemonicParsing="false" onAction="#changeScreenSaveButtonPushed" prefHeight="26.0" prefWidth="49.0" text="Save" />
+                  <Button id="button" layoutX="85.0" layoutY="549.0" mnemonicParsing="false" onAction="#changeScreenCanclePushed" prefHeight="26.0" prefWidth="63.0" text="Cancel" />
+               </children>
+               <stylesheets>
+                  <URL value="@../../CSS/anchors.css" />
+                  <URL value="@../../CSS/button.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="300.0" style="-fx-background-color: #bababa;" stylesheets="@../../CSS/sidebar_button.css">
+               <children>
+                  <Button id="sidebar_button" alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Home" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="108.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Cost Estimation" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="162.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Customers" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="54.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Contract" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="423.0" fitWidth="300.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/construction_sidebar.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="636.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Exit" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane layoutX="311.0" layoutY="16.0" prefHeight="47.0" prefWidth="952.0" style="-fx-background-color: #F7EAE7;">
+               <children>
+                  <Button id="button" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#changeScreenCancleButtonPushed" stylesheets="@../../CSS/button.css" text="&lt; Back" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

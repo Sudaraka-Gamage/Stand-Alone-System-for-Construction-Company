@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contract.management.ContractManagementController">
+  <items>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #B2A9A7;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="1280.0" layoutX="254.0" layoutY="66.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../images/top-bar.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: RGB(235,235,235);">
+         <children>
+            <AnchorPane id="top_anchor" layoutX="311.0" layoutY="14.0" prefHeight="68.0" prefWidth="952.0">
+               <children>
+                  <Button id="button" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="26.0" prefWidth="82.0" text="Add New" />
+                  <Button id="button" layoutX="786.0" layoutY="20.0" mnemonicParsing="false" onAction="#changeScreenUpdateButtonPushed" prefHeight="26.0" prefWidth="70.0" text="Update" />
+                  <Button id="button" layoutX="871.0" layoutY="20.0" mnemonicParsing="false" onAction="#changeScreenUpdateButtonPushed" prefHeight="26.0" prefWidth="66.0" text="Delete" />
+                  <Button id="button" layoutX="115.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" text="Save Report" />
+                  <Label fx:id="isConnected" layoutX="476.0" layoutY="25.0" text="Label" />
+               </children>
+               <stylesheets>
+                  <URL value="@../../CSS/button.css" />
+                  <URL value="@../../CSS/anchors.css" />
+               </stylesheets></AnchorPane>
+            <AnchorPane id="top_anchor" layoutX="311.0" layoutY="14.0" prefHeight="580.0" prefWidth="952.0" style="-fx-background-color: #F7EAE7;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="93.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="28.0" text="Contract ID :" />
+                  <TextField layoutX="101.0" layoutY="24.0" prefHeight="26.0" prefWidth="95.0" />
+                  <Label layoutX="225.0" layoutY="28.0" text="From :" />
+                  <Label layoutX="447.0" layoutY="28.0" text="To :" />
+                  <DatePicker layoutX="269.0" layoutY="24.0" prefHeight="26.0" prefWidth="162.0" />
+                  <DatePicker layoutX="474.0" layoutY="24.0" prefHeight="26.0" prefWidth="162.0" />
+                  <CheckBox layoutX="680.0" layoutY="28.0" mnemonicParsing="false" text="Completed" />
+                  <CheckBox layoutX="790.0" layoutY="28.0" mnemonicParsing="false" text="Ongoing" />
+                  <TableView fx:id="tbl_contract" layoutX="14.0" layoutY="76.0" prefHeight="484.0" prefWidth="923.0">
+                    <columns>
+                      <TableColumn fx:id="clm_contract_id" prefWidth="88.79998779296875" text="Contract ID" />
+                        <TableColumn fx:id="clm_customer_id" prefWidth="91.199951171875" text="Customer ID" />
+                        <TableColumn fx:id="clm_site_address" prefWidth="108.800048828125" text="Site Address" />
+                        <TableColumn fx:id="clm_start_date" prefWidth="75.0" text="Start Date" />
+                        <TableColumn fx:id="clm_end_date" prefWidth="75.0" text="End Date" />
+                        <TableColumn fx:id="clm_completed" prefWidth="75.0" text="Completed" />
+                        <TableColumn fx:id="clm_estimated_cost" prefWidth="93.60003662109375" text="Estimated Cost" />
+                        <TableColumn fx:id="clm_warranty_period" prefWidth="106.39990234375" text="Warranty Period" />
+                    </columns>
+                  </TableView>
+                  <Button id="button" layoutX="884.0" layoutY="24.0" mnemonicParsing="false" text="Filter" />
+               </children>
+               <stylesheets>
+                  <URL value="@../../CSS/anchors.css" />
+                  <URL value="@../../CSS/button.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="300.0" style="-fx-background-color: #bababa;" stylesheets="@../../CSS/sidebar_button.css">
+               <children>
+                  <Button id="sidebar_button" alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Home" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="636.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Exit" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="108.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Cost Estimation" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="162.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Customers" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="sidebar_button" alignment="CENTER" layoutY="54.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" text="Contract" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="423.0" fitWidth="300.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/construction_sidebar.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

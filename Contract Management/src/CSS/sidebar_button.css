@@ -1,0 +1,11 @@
+#sidebar_button{
+	-fx-background-color: #6b778d;
+	-fx-text-align: center;
+	-fx-text-fill: #ffffff;
+	-fx-border-bottom: 2px solid red;
+}
+
+#sidebar_button:hover{
+	-fx-background-color: #3D3D3B;
+	-fx-text-fill: #ffffff;
+}

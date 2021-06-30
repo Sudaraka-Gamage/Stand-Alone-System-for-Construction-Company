@@ -1,0 +1,11 @@
+#button{
+	-fx-background-color: #4c5870;
+	-fx-text-align: center;
+	-fx-text-fill: #ffffff;
+	-fx-transition-duration: 0.4s;
+}
+
+#button:hover{
+	-fx-background-color: #6b778d;
+	-fx-text-fill: #ffffff;
+}

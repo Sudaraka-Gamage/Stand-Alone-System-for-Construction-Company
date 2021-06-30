@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.UpdateUtilityBill_FXMLController">
+  <items>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #B2A9A7;">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="1284.0" layoutX="-4.0" layoutY="-2.0">
+               <image>
+                  <Image url="@../../images/top-bar.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: RGB(235,235,235);">
+         <children>
+            <AnchorPane accessibleText="Select One" layoutX="316.0" layoutY="16.0" prefHeight="662.0" prefWidth="962.0" style="-fx-background-color: #F7EAE7;" styleClass="button" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="378.0" layoutY="10.0" prefHeight="39.0" prefWidth="204.0" text="Update Utility Bill" textAlignment="CENTER" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="due_date" layoutX="147.0" layoutY="83.0" prefHeight="444.0" prefWidth="714.0" style="-fx-background-color: #ccc7c3;">
+                     <children>
+                        <Label layoutX="140.0" layoutY="80.0" text="Bill ID :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="140.0" layoutY="120.0" text="Select Contract :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="140.0" layoutY="160.0" text="Select Bill Type :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="140.0" layoutY="240.0" text="Due Date :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="140.0" layoutY="280.0" text="Paid Date :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="140.0" layoutY="320.0" text="Charges for the Period :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="charges" layoutX="410.0" layoutY="320.0" />
+                        <Button layoutX="330.0" layoutY="380.0" mnemonicParsing="false" onAction="#updateBill" text="Update">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="140.0" layoutY="200.0" text="Select Month  :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="contract_id" layoutX="410.0" layoutY="120.0" prefWidth="150.0" />
+                        <ComboBox fx:id="bill_type" layoutX="410.0" layoutY="160.0" prefWidth="150.0" />
+                        <ComboBox fx:id="month" layoutX="410.0" layoutY="200.0" prefWidth="150.0" />
+                        <Label fx:id="bill_id" layoutX="410.0" layoutY="80.0" />
+                        <Label fx:id="due_Date" layoutX="410.0" layoutY="240.0" />
+                        <Label fx:id="paid_date" layoutX="410.0" layoutY="280.0" />
+                        <Button layoutX="460.0" layoutY="380.0" mnemonicParsing="false" onAction="#fillSampleData" text="DEMO" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="300.0" style="-fx-background-color: #bababa;">
+               <children>
+                  <Button id="home_button" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#home" prefHeight="54.0" prefWidth="300.0" text="Home" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#finance" prefHeight="54.0" prefWidth="300.0" text="Finance" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#utillBill" prefHeight="54.0" prefWidth="300.0" text="Utill Bill" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#viewUtillBills" prefHeight="54.0" prefWidth="300.0" text="View Utill Bills" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#addUtillBill" prefHeight="54.0" prefWidth="300.0" text="Add Utill Bill" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="54.0" prefWidth="300.0" text="Exit" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane layoutX="-1.0" layoutY="384.0" prefHeight="253.0" prefWidth="314.0">
+               <children>
+                  <ImageView fitHeight="231.0" fitWidth="300.0" layoutY="0.0">
+                     <image>
+                        <Image url="@../../images/Milliken-Chemical-building-construction-antimicrobial.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

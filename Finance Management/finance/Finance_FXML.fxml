@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="mainPane" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.Finance_FXMLController">
+  <items>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: #B2A9A7;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="1280.0" layoutX="254.0" layoutY="66.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../images/top-bar.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: RGB(235,235,235);">
+         <children>
+            <AnchorPane accessibleText="Select One" layoutX="316.0" layoutY="16.0" prefHeight="662.0" prefWidth="962.0" style="-fx-background-color: #F7EAE7;" styleClass="button" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="378.0" layoutY="10.0" prefHeight="39.0" prefWidth="204.0" text="Finance Details" textAlignment="CENTER" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="184.0" layoutY="112.0" onMouseClicked="#contractPayments" prefHeight="320.0" prefWidth="547.0" style="-fx-background-color: #ccc7c3;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="211.0" layoutY="1.0" text="Total Contracts Cost" textAlignment="CENTER" textFill="#4c5870">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="260.0" text="Total Cost :">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="totalCost" layoutX="320.0" layoutY="260.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="40.0" text="Material Cost :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="80.0" text="Salary Cost :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="120.0" text="Depreciation Cost :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="160.0" text="Delivery Cost :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="material" layoutX="320.0" layoutY="40.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="salary" layoutX="320.0" layoutY="80.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="depre" layoutX="320.0" layoutY="120.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="delivery" layoutX="320.0" layoutY="160.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="200.0" text="UtilityBills :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="utility" layoutX="320.0" layoutY="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="300.0" style="-fx-background-color: #bababa;">
+               <children>
+                  <Button id="home_button" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#home" prefHeight="54.0" prefWidth="300.0" text="Home" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="54.0" prefWidth="300.0" text="Exit" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#utilityBill" prefHeight="54.0" prefWidth="300.0" text="Utility Bill" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#utilityBillDetails" prefHeight="54.0" prefWidth="300.0" text="Utility Bill Details" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#contractPayments" prefHeight="54.0" prefWidth="300.0" text="Contract Payments" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button id="home_button" alignment="CENTER" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#generateReport" prefHeight="54.0" prefWidth="300.0" text="Generate Reports" textFill="#4c5870">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutX="0.0" layoutY="388.0" prefHeight="229.0" prefWidth="300.0">
+                     <children>
+                        <ImageView fitHeight="226.0" fitWidth="300.0" layoutY="0.0">
+                           <image>
+                              <Image url="@../images/Milliken-Chemical-building-construction-antimicrobial.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
